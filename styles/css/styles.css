@@ -1,0 +1,40 @@
+@font-face {
+  font-family: 'Godof';
+  src: url("../../font/GODOFWAR.TTF");
+  font-weight: normal;
+  font-style: normal; }
+
+body {
+  width: 100vw; }
+
+body {
+  background-color: #e2e2e2; }
+
+#top {
+  height: 103px;
+  width: 100%;
+  background-color: grey; }
+  #top img {
+    width: 100px; }
+  #top h1 {
+    display: inline;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: black;
+    font-size: 2em;
+    line-height: 103px; }
+
+@media screen and (min-width: 800px) {
+  #top {
+    height: 153px;
+    width: 100%;
+    background-color: grey; }
+    #top img {
+      width: 150px; }
+    #top h1 {
+      display: inline;
+      font-family: sans-serif;
+      font-weight: bold;
+      color: black;
+      font-size: 3em;
+      line-height: 146px; } }

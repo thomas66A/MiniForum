@@ -1,0 +1,20 @@
+@font-face {
+font-family: 'Godof';
+src: url('../../font/GODOFWAR.TTF');
+font-weight: normal;
+font-style: normal;
+}
+
+
+html, body
+{
+    //background-color: $brunF;
+}
+body
+{
+    width:100vw;
+    
+}
+@import "_partials/styles.scss";
+//@import "_partials/moyenPlus.scss";
+//@import "_partials/portable.scss";
