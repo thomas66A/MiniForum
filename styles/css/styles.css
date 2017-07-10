@@ -7,34 +7,269 @@
 body {
   width: 100vw; }
 
+@font-face {
+  font-family: 'hobo';
+  src: url("../../font/HoboStd.otf");
+  font-weight: normal;
+  font-style: normal; }
+
 body {
-  background-color: #e2e2e2; }
+  background-color: #89fdf3;
+  background-image: url("../../image/arcEnCiel.jpg");
+  background-size: cover;
+  background-position-y: 0px;
+  background-attachment: fixed;
+  background-repeat: no-repeat; }
 
 #top {
-  height: 103px;
+  height: 75px;
   width: 100%;
-  background-color: grey; }
+  background: linear-gradient(to right, red, lightcoral);
+  text-align: center;
+  border-bottom: 1px solid black; }
   #top img {
-    width: 100px; }
-  #top h1 {
-    display: inline;
-    font-family: sans-serif;
-    font-weight: bold;
-    color: black;
-    font-size: 2em;
-    line-height: 103px; }
+    width: 300px; }
 
-@media screen and (min-width: 800px) {
+#conteneur {
+  width: calc(100% - 10px); }
+  #conteneur #titre {
+    font-family: hobo;
+    text-align: center;
+    font-size: 1.2em;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #262725;
+    font-weight: bold; }
+  #conteneur nav {
+    position: relative; }
+
+a, p {
+  text-decoration: none;
+  font-family: hobo;
+  font-size: 1.2em;
+  color: #262725;
+  font-weight: bold; }
+
+.boutonNav {
+  position: absolute;
+  width: 100%;
+  margin-left: 5px;
+  margin-right: 5px;
+  height: 30px;
+  border: 1px solid #262725;
+  border-radius: 0px 0px 10px 10px;
+  background-color: rgba(5, 245, 224, 0.45);
+  z-index: 0; }
+
+.carre {
+  background-color: #05f5e0 !important;
+  border: 1px solid #05f5e0;
+  border-radius: 0px;
+  display: block;
+  z-index: 2; }
+
+nav:hover span {
+  position: absolute;
+  top: 30px;
+  height: 160px; }
+  nav:hover span button {
+    position: relative; }
+
+nav:hover {
+  height: 162px; }
+
+#corp {
+  margin-top: 19px;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border: 1px solid #262725;
+  border-radius: 10px 10px 10px 10px;
+  background-color: rgba(5, 245, 224, 0.45); }
+  #corp p {
+    font-family: sans-serif;
+    text-align: justify; }
+  #corp h1 {
+    text-align: center;
+    font-family: hobo;
+    font-size: 1.2em;
+    margin-top: 24px;
+    margin-bottom: 16px;
+    color: #262725;
+    font-weight: bold; }
+
+#titre {
+  font-family: hobo;
+  text-align: center;
+  font-size: 1.2em;
+  margin-top: 44px;
+  margin-bottom: 16px;
+  color: #262725;
+  font-weight: bold; }
+
+.lesPosts {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 19px;
+  margin-left: 5px;
+  margin-right: 5px;
+  border: 1px solid #262725;
+  border-radius: 10px 10px 10px 10px;
+  background-color: rgba(5, 245, 224, 0.45); }
+
+.postGauche {
+  min-width: 300px;
+  height: 50px;
+  border-bottom: 1px solid black; }
+
+.postDroit {
+  min-width: 300px; }
+
+@media screen and (min-width: 480px) {
   #top {
-    height: 153px;
-    width: 100%;
-    background-color: grey; }
+    height: 113px;
+    text-align: left; }
     #top img {
-      width: 150px; }
+      width: 450px; }
     #top h1 {
       display: inline;
       font-family: sans-serif;
       font-weight: bold;
       color: black;
       font-size: 3em;
-      line-height: 146px; } }
+      line-height: 146px; }
+  #conteneur {
+    width: 100vw; }
+    #conteneur h1 {
+      font-size: 1.5em; }
+    #conteneur nav {
+      width: 100%; }
+    #conteneur a, #conteneur p {
+      font-size: 1em; }
+    #conteneur nav span {
+      display: block;
+      width: 100%;
+      text-align: center; }
+    #conteneur .boutonNav {
+      position: relative;
+      width: 19%;
+      margin-left: -3px;
+      margin-right: 0px;
+      margin-top: -1px; }
+    #conteneur .carre {
+      display: none; }
+    #conteneur nav:hover span {
+      position: relative;
+      top: initial;
+      height: initial; }
+      #conteneur nav:hover span button {
+        position: relative; }
+    #conteneur nav:hover {
+      height: initial; }
+  #titre {
+    font-family: hobo;
+    text-align: center;
+    font-size: 1.2em;
+    margin-top: 25px;
+    margin-bottom: 16px;
+    color: #262725;
+    font-weight: bold; }
+  .lesPosts {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 19px;
+    border: 1px solid #262725;
+    border-radius: 10px 10px 10px 10px;
+    background-color: rgba(5, 245, 224, 0.45); }
+  .postGauche {
+    width: 15%;
+    min-width: initial;
+    height: 50px;
+    border-right: 1px solid black;
+    border-bottom: initial; }
+  .postDroit {
+    width: 80%; } }
+
+@media screen and (min-width: 960px) {
+  #top {
+    height: 130px; }
+    #top img {
+      width: 520px; }
+  #conteneur {
+    width: 100vw; }
+    #conteneur h1 {
+      font-size: 1.8em; }
+    #conteneur nav span {
+      display: block;
+      text-align: center; }
+    #conteneur nav span button {
+      width: 200px; }
+    #conteneur nav span button a {
+      font-size: 1.8em; }
+  #corp, .lesPosts {
+    margin-left: 80px;
+    margin-right: 80px; } }
+
+#formulaire {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 300px;
+  min-height: 125px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid #262725;
+  border-radius: 10px 10px 10px 10px;
+  background-color: rgba(5, 245, 224, 0.45); }
+  #formulaire .boxIn {
+    width: 300px;
+    height: 30px;
+    border: 1px solid #262725;
+    border-radius: 10px 10px 10px 10px;
+    background-color: rgba(5, 245, 224, 0.45); }
+  #formulaire label {
+    width: 300px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    font-family: hobo;
+    font-size: 1em;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: #262725;
+    font-weight: bold; }
+  #formulaire .In {
+    margin-top: 20px;
+    font-family: hobo;
+    font-size: 1em;
+    color: #262725;
+    font-weight: bold;
+    box-shadow: 3px 3px 5px #000000; }
+  #formulaire .out {
+    font-family: sans-serif;
+    font-size: 1em;
+    box-shadow: inset 3px 3px 5px #000000;
+    padding-left: 10px; }
+  #formulaire h2 {
+    text-align: center;
+    width: 100%;
+    margin-top: 20px; }
+  #formulaire h2 a {
+    color: red;
+    font-size: 1em; }
+
+.sansDeco {
+  margin-top: 50px !important;
+  border: initial !important;
+  border-radius: initial !important;
+  background-color: initial !important; }

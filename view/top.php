@@ -12,6 +12,6 @@
 </body>
 </html>
 <div id="top">
-    <img src="image/roue.png">
-    <h1>Le forum consacré à la couleur</h1>
-</div>
+        <img src="image/forumCouleur600.png" title="Le forum dédié à la couleur" alt="Le forum dédié à la couleur">
+    </div>
+
