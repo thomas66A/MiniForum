@@ -11,7 +11,10 @@
     </nav>
 </div>
 <h1 id="titre">Le forum, consacré à la couleur</h1>
-<div id="corp" class="sansDeco">
+<div id="corp" class="probleme">
         <h1>Un problème sur le site</h1>
-        <h2>Le problème:       </h2>
+        <h2>Le problème:</h2>
+        <p><?php if(isset($_GET['message'])) echo $_GET['message'];?><br>
+        <?php if((isset($_GET['showbutton']))&&($_GET['showbutton']==1)) 
+        echo "<button class=\"boutonNav carre2\" onclick=\"goBack()\">RETOUR</button></p>";?>
 </div>

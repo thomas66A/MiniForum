@@ -14,7 +14,7 @@
     <h1 id="titre">Le forum, consacré à la couleur</h1>
 <div id="corp" class="sansDeco">
         <h1>Inscription: création de compte</h1>
-        <form action="fonction/inscription.php" method="post" id="formulaire">
+        <form action="service/inscription.php" method="post" id="formulaire">
            
             <label>Nom: </label>
             <input type="text" name="nom" class="boxIn out" required>
@@ -22,7 +22,7 @@
             <input type="text" name="prenom" class="boxIn out" required>
             
             <label>Email: </label>
-            <input type="email" name="email" class="boxIn out" required>
+            <input type="text" name="email" class="boxIn out" required>
             <label>Telephone: </label>
             <input type="telephone" name="telephone" class="boxIn out" required>
             

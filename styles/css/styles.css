@@ -68,6 +68,21 @@ a, p {
   display: block;
   z-index: 2; }
 
+.carre2 {
+  font-family: hobo;
+  font-size: 1.2em;
+  color: #262725;
+  font-weight: bold;
+  width: 300px;
+  text-align: center;
+  height: 30px;
+  margin-top: 20px;
+  margin-bottom: -1px;
+  border: 1px solid #262725;
+  border-radius: 10px 10px 10px 10px;
+  background-color: rgba(5, 245, 224, 0.45);
+  position: initial; }
+
 nav:hover span {
   position: absolute;
   top: 30px;
@@ -128,6 +143,20 @@ nav:hover {
 
 .postDroit {
   min-width: 300px; }
+
+.probleme {
+  text-align: center !important; }
+  .probleme h2 {
+    font-family: hobo;
+    color: #262725;
+    font-weight: bold;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 15px; }
+  .probleme p {
+    text-align: center !important;
+    font-size: 1em !important;
+    margin-bottom: 15px; }
 
 @media screen and (min-width: 480px) {
   #top {
@@ -195,7 +224,12 @@ nav:hover {
     border-right: 1px solid black;
     border-bottom: initial; }
   .postDroit {
-    width: 80%; } }
+    width: 80%; }
+  .probleme h2 {
+    color: red;
+    font-size: 1,5em; }
+  .probleme p {
+    font-size: 1em; } }
 
 @media screen and (min-width: 960px) {
   #top {
