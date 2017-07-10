@@ -56,6 +56,11 @@ switch($page)
         include('view/mpOublie.php');
         include('view/bottom.php');
         break;
+        case "succes":
+        include('view/top.php');
+        include('view/succes.php');
+        include('view/bottom.php');
+        break;
 
         default:
         include('view/top.php');

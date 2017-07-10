@@ -1,27 +1,6 @@
 <?php
-    
-
-    function securite_bdd($string)
-
-    {
-        // On regarde si le type de string est un nombre entier (int)
-        if(ctype_digit($string))
-        {
-            $string = intval($string);
-        }
-        // Pour tous les autres types
-        else
-        {
-            $string = mysql_real_escape_string($string);
-            $string = addcslashes($string, '%_');
-        }
-        return $string;
-    }
-	
-
 
 function nettoyage($chaine)
-
 {
     setlocale(LC_ALL, 'fr_FR');
     $chaine = iconv('UTF-8', 'ASCII//TRANSLIT//IGNORE', $chaine);
@@ -38,14 +17,18 @@ function controleEmail($lemail)
 if (preg_match('#^[\w.-]+@[\w.-]+\.[a-z]{2,6}$#i', $lemail)) 
 {
     $bon=true;
-} else {
+} 
+else
+{
     $bon=false;
 }
 return $bon;
 }
+
+
 function controleTelephone($tele)
     {
-        if (preg_match("#^0[0-9]([ .-]?[0-9]{2}){4}$#",$tele )):
+        if (preg_match("#^0[0-9]([ .-]?[0-9]{2}){4}$#",$tele ))
             {
                 $telebon=true;
             }
@@ -55,5 +38,10 @@ function controleTelephone($tele)
             }
         return $telebon;
     }
+function creationMdp( $length = 6 ) {
+    $chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+    $motDePasse = substr( str_shuffle( $chars ), 0, $length );
+    return $motDePasse;
+}
 
 ?>

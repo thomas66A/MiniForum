@@ -28,4 +28,5 @@
             
             <input type="submit" value="INSCRIPTION" class="boxIn In">
         </form>
+        
 </div>
