@@ -1,4 +1,5 @@
 <?php
+session_start();
 include("../fonction/securite.php");
 include("../fonction/databaseFunction.php");
 include("../fonction/diversFonction.php");
@@ -32,11 +33,10 @@ $connexion = connexion();
 $objet = $connexion->prepare('SELECT * FROM utilisateur WHERE email=:utMail');
 $objet->execute(array('utMail'=>$lemail));
 $retourBase = $objet->fetch();
+$idUT = $retourBase['id'];
+$pseudo = $retourBase['pseudo'];
 $mail = $retourBase['email'];
 $mdp2 = $retourBase['motDePasse'];
-$avatar = $retourBase['lienAvatar'];
-$grade = $retourBase['grade'];
-$valid = $retourBase['utilisateurValid'];
 $objet->closeCursor();
 if(($mail==$lemail)&&($mdp==$mdp2))
     {
@@ -44,11 +44,9 @@ if(($mail==$lemail)&&($mdp==$mdp2))
     /*Alfonso: $_SESSION['uid'] suffira à mon avis et le pseudo également
     * pas de mot de passe dans la session!
      * */
-    // $_SESSION['mail']=$mail;
-    // $_SESSION['mp']=$mdp2;
-    // $_SESSION['avatar']=$avatar;
-    // $_SESSION['grade']=$grade;
-    // $_SESSION['valid']=$valid;
+    $_SESSION['id']=$idUT;
+    $_SESSION['pseudo']=$pseudo;
+    
     header('location:../index.php?page=sujet');
     }
 else

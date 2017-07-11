@@ -4,6 +4,10 @@ src: url('../../font/HoboStd.otf');
 font-weight: normal;
 font-style: normal;
 }
+.ligne
+{
+clear:both;
+}
 body
 {
     background-color:#89fdf3;
@@ -88,6 +92,22 @@ a, p
     background-color: rgba(5, 245, 224, 0.45);
     position:initial;
 }
+.carre3
+{
+    display:block;
+    font-family: hobo;
+    font-size:1.2em;
+    color:#262725;
+    font-weight: bold;
+    width:100%;
+    text-align: center;
+    height:30px;
+    line-height: 30px;
+    margin-bottom:5px;
+    background-color: rgba(5, 245, 224, 0.45);
+    border:1px solid rgba(5, 245, 224, 0.45);
+    position:initial;
+}
 nav:hover span
 { 
     position: absolute;  
@@ -156,13 +176,46 @@ nav:hover
 }
 .postGauche
 {
+    font-family: sans-serif;
     min-width:300px;
-    height:50px;
+    margin-bottom: 25px;
     border-bottom:1px solid black;
+    p
+    {
+        font-family: sans-serif;
+    }
 }
 .postDroit
 {
     min-width:300px;
+    h3
+    {
+        text-align: center;
+        font-family: hobo;
+        font-size: 1.2em;
+        margin-bottom:10px;
+    }
+    p
+    {
+        font-family: sans-serif;
+        font-weight: initial;
+    }
+    #g
+    {
+        display:inline;
+        left:0px;
+        float:left;
+        font-family: sans-serif;
+        font-size: 1em;
+    }
+    #d
+    {
+        display:inline;
+        right:0px;
+        float:right;
+        font-family: sans-serif;
+        font-size: 1em;
+    }
 }
 .probleme
 {
@@ -280,14 +333,14 @@ nav:hover
 }
 .postGauche
 {
-    width:15%;
     min-width:initial;
-    height:50px;
-    border-right:1px solid black;
+    width:15%;
     border-bottom: initial;
 }
 .postDroit
 {
+    padding-left:10px;
+    border-left:1px solid black;
     width:80%;
 }
 .probleme

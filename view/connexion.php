@@ -24,5 +24,5 @@
 
         </form>
         <br>
-        <?php //echo $_SESSION['avatar'];?>
+        <?php echo $_SESSION['pseudo'];?>
 </div>

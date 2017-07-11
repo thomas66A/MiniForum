@@ -14,13 +14,15 @@
     <h1 id="titre">Le forum, consacré à la couleur</h1>
 <div id="corp">
         <h1>DISCUSSIONS</h1>
-        <p>Ici apparaitront les divers post
+        <?php include('model/creerAffichageSujet.php'); echo $affiche;?>
         </p>
 </div>
 <div class="lesPosts">
     <div class="postGauche">
-    </div>
-
-    <div class="postDroit"> 
+        
+    </div> 
+        
+    <div class="postDroit">
+        <?php if(isset($showSujet)) echo "<h3>".$titreAffiche{$showSujet}."</h3><a href=\"index.php?page=creerpost\">   Creer un nouveau post</a><br><hr>";if(isset($affiche1)) echo $affiche1; ?>
     </div>       
 </div>
