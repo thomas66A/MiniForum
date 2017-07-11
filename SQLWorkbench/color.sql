@@ -16,6 +16,31 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `categorie`
+--
+
+DROP TABLE IF EXISTS `categorie`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `categorie` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nomCategorie` varchar(255) DEFAULT NULL,
+  `idCat` int(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `categorie`
+--
+
+LOCK TABLES `categorie` WRITE;
+/*!40000 ALTER TABLE `categorie` DISABLE KEYS */;
+INSERT INTO `categorie` VALUES (1,'Qu\'est ce qu\'une couleur.',1),(2,'Couleur et symbolisme.',2),(3,'Quel mélange pour une couleur?',3),(4,'Tout autre sujet, sur la couleur.',4);
+/*!40000 ALTER TABLE `categorie` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `discussion`
 --
 
@@ -33,10 +58,11 @@ CREATE TABLE `discussion` (
   `nombreVue` varchar(255) DEFAULT NULL,
   `postPlus` int(255) DEFAULT NULL,
   `postMoins` int(255) DEFAULT NULL,
-  `validMessage` varchar(255) DEFAULT NULL,
+  `reponseMessage` varchar(255) DEFAULT NULL,
   `categorie` varchar(255) DEFAULT NULL,
+  `numMessage` int(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -45,6 +71,7 @@ CREATE TABLE `discussion` (
 
 LOCK TABLES `discussion` WRITE;
 /*!40000 ALTER TABLE `discussion` DISABLE KEYS */;
+INSERT INTO `discussion` VALUES (1,'Le noir. Est-il une couleur.','Non, le noir est l\'absence de toute couleur. Mais dans les faits, notre noir visible n\'est pas, ce que l\'on appelle un noir absolue...','2017-07-11','toto66',NULL,NULL,NULL,NULL,NULL,'1','1',1),(2,'Et le blanc?','Contrairement au noir, qui est l\'absence de toute couleur, le blanc est le produit du reflex de toute couleur. Le blanc absolue est donc un mirroir....',NULL,'toto66',NULL,NULL,NULL,3,NULL,'1','1',2),(3,'Comment je fais du orange?','Je dois peindre ma porte en orange, mais j\'en ai pas. il me reste des fonds de rouge de bleu et de jaune.',NULL,'toto66',NULL,NULL,NULL,NULL,NULL,'1','3',1),(4,'Réponse','tu mélange du jaune à rouge et tu teste',NULL,'toto66','juju8',NULL,'2',NULL,NULL,'2','3',1),(5,'Le rouge','Le rouge représente souvent le danger. pourquoi?',NULL,'toto66',NULL,NULL,NULL,NULL,NULL,'1','2',1),(6,'Reponse','le feu est rouge, ainsi que le sang...',NULL,'toto66','juju8',NULL,NULL,NULL,NULL,'2','2',1);
 /*!40000 ALTER TABLE `discussion` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -92,4 +119,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-07-10 17:01:02
+-- Dump completed on 2017-07-11 17:03:36
