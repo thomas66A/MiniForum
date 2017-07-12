@@ -39,9 +39,10 @@ while($retourBase1 = $objet1->fetch())
          $titre1 = $retourBase1['titreMessage'];
          $categorie = $retourBase1['categorie'];
          $numMessage = $retourBase1['numMessage'];
+         $createur = $retourBase1['pseudoCreateur'];
          if($retourBase1['reponseMessage']==1)
          {
-         $affiche1 = $affiche1 . "<a href=\"index.php?page=voirPost&categorie=$categorie&numMessage=$numMessage\"> - " . $titre1 ."<a><br><hr>";
+         $affiche1 = $affiche1 . "<a href=\"index.php?page=voirPost&categorie=$categorie&numMessage=$numMessage&pseudoC=$createur\"> - " . $titre1 ."<a><br><hr>";
          }
          $i++;
          

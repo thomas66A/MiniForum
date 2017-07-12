@@ -23,14 +23,17 @@ $objet->execute(array(
     'mes' => $numMessage
 ));
 $affiche="";
+$pseudo="";
+$pseudoR="";
 while($retourBase = $objet->fetch())
      {   
           $message=$retourBase['message'];
           $pseudo=$retourBase['pseudoCreateur'];
+          $pseudoR=$retourBase['pseudoRepondeur'];
           $date=$retourBase['dateMessage'];
-           $affiche = $affiche . "<h4 id=\"g\">" . $pseudo . "<h4><h4 id=\"d\">" . $date . "</h4><hr class=\"ligne\"><p>" . $message ."</p><hr>"; 
+        $affiche = $affiche . "<h4 id=\"g\">" . $pseudo . ". Reponse de:".$pseudoR."<h4><h4 id=\"d\">" . $date . "</h4><hr class=\"ligne\"><p>" . $message ."</p><hr>"; 
      }
 $objet->closeCursor();
     }
-$affiche = $affiche . "<button class=\"carre2\">REPONDRE</button>";
+$affiche = $affiche . "<button class=\"carre2\" id=\"repond\">REPONDRE</button>";
 ?>

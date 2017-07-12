@@ -17,16 +17,23 @@
 
 <div class="lesPosts">
     <div class="postGauche">
-        
+        <a href="index.php?page=sujet&showSujet=1" class="carre4">RETOUR</a>
     </div> 
         
     <div class="postDroit">
         <p><?php include('model/voirpost.php');echo $affiche;?></p>
     </div>       
 </div>
+
 <div id="repondre">
-    <form action="../model/repondre.php">
-        <text
+<button id="stop">X</button>
+    <form action="model/repondre.php" method="post">
+        <textarea name="reponse">
+        </textarea>
+        <input type="hidden" name="categorie" value="<?php echo $categorie;?>">
+        <input type="hidden" name="numMessage" value="<?php echo $numMessage;?>">
+        <input type="hidden" name="createur" value="<?php echo $pseudo;?>">
+        <input type="submit">
     </form>
 </div>
 

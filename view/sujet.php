@@ -23,6 +23,16 @@
     </div> 
         
     <div class="postDroit">
-        <?php if(isset($showSujet)) echo "<h3>".$titreAffiche{$showSujet}."</h3><a href=\"index.php?page=creerpost\">   Creer un nouveau post</a><br><hr>";if(isset($affiche1)) echo $affiche1; ?>
+        <?php if(isset($showSujet)) echo "<h3>".$titreAffiche{$showSujet}."</h3><button class=\"carre2\" id=\"repond\">Creer une nouvelle discussion.</button><br><hr>";if(isset($affiche1)) echo $affiche1; ?>
     </div>       
+</div>
+<div id="repondre">
+<button id="stop">X</button>
+    <form action="model/creerDiscussion.php" method="post">
+    <label>Titre de votre nouvelle discussion:</label><br><input type="text" name="titre" class="boxIn">
+        <textarea name="reponse">
+        </textarea>
+        <input type="hidden" name="categorie" value="<?php echo $showSujet;?>">
+        <input type="submit">
+    </form>
 </div>

@@ -237,6 +237,82 @@ nav:hover
         margin-bottom:15px;
     }
 }
+#repondre
+{   display:none;
+    position:absolute;
+    top:50px;
+    left:5%;
+    width:90%;
+    border:1px solid #262725;
+    border-radius: 10px 10px 10px 10px;
+    background-color: rgba(5, 245, 224, 0.90);
+    z-index:20;
+    #stop
+        {
+            background-color:red;
+            height:40px;
+            width:40px;
+            border:1px solid white;
+            border-radius: 20px 20px 20px 20px;
+            font-family: sans-serif;
+            font-size: 1.5em;
+            line-height: 36px;
+            float:right;
+            color:white;
+            font-weight: bold;
+            margin: 20px;
+        }
+    form 
+    {
+        width:90%;
+        margin-left:5%;
+        margin-right:5%;
+        margin-top:15px;
+        
+        textarea
+        {
+            width:100%;
+            min-height:160px;
+            padding:10px;
+            box-shadow:inset 3px 3px 5px #000000;
+        }
+        
+        input[type=submit]
+        {
+        font-family: hobo;
+        font-size:1.2em;
+        color:#262725;
+        font-weight: bold;
+        width:300px;
+        text-align: center;
+        height:30px;
+        margin-top:20px;
+        margin-bottom:-1px;
+        border:1px solid #262725;
+        border-radius: 10px 10px 10px 10px;
+        background-color: rgba(5, 245, 224, 0.45);
+        margin-bottom:20px;
+        }
+    }
+}
+.boxIn
+    {
+        width:300px;
+        height:30px;
+        padding-left:10px;
+        padding-right:10px;
+        border: 1px solid #262725;
+        border-radius: 10px 10px 10px 10px;
+        box-shadow:inset 3px 3px 5px #000000;
+        background-color: white;
+    }
+.red
+{
+    color:white;
+    position:absolute;
+    bottom:0px;
+    background-color:red;
+}
 @media screen and (min-width: 480px)
 {
 #top
@@ -355,7 +431,21 @@ nav:hover
         font-size:1em;
     }
 }
+#repondre
+{
+    
+    
+    top:200px;
+    min-width:75%;
+    text-align: center;
+    width:initial;
+    margin:initial;
+    margin-left:100px;
+    margin-right:100px;;
+
 }
+}
+
 @media screen and (min-width: 960px)
 {
 #top

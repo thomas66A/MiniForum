@@ -4,7 +4,7 @@ function nettoyage($chaine)
 {
     setlocale(LC_ALL, 'fr_FR');
     $chaine = iconv('UTF-8', 'ASCII//TRANSLIT//IGNORE', $chaine);
-    $chaine = preg_replace('#[^0-9a-z]+#i', ' ', $chaine);
+    $chaine = preg_replace('#[^0-9a-z\.\-_ \?\:\,\(\)\/\@]+#i', ' ', $chaine);
     while(strpos($chaine, '--') !== false)
     {
         $chaine = str_replace('--', '-', $chaine);
