@@ -14,7 +14,7 @@
     <h1 id="titre">Le forum, consacré à la couleur</h1>
 <div id="corp">
         <h1>DISCUSSIONS</h1>
-        <?php include('model/creerAffichageSujet.php'); echo $affiche;?>
+        <?php include('service/creerAffichageSujet.php'); echo $affiche;?>
         </p>
 </div>
 <div class="lesPosts">
@@ -28,7 +28,7 @@
 </div>
 <div id="repondre">
 <button id="stop">X</button>
-    <form action="model/creerDiscussion.php" method="post">
+    <form action="service/creerDiscussion.php" method="post">
     <label>Titre de votre nouvelle discussion:</label><br><input type="text" name="titre" class="boxIn">
         <textarea name="reponse">
         </textarea>

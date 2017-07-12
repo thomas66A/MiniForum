@@ -21,13 +21,13 @@
     </div> 
         
     <div class="postDroit">
-        <p><?php include('model/voirpost.php');echo $affiche;?></p>
+        <p><?php include('service/voirpost.php');echo $affiche;?></p>
     </div>       
 </div>
 
 <div id="repondre">
 <button id="stop">X</button>
-    <form action="model/repondre.php" method="post">
+    <form action="service/repondre.php" method="post">
         <textarea name="reponse">
         </textarea>
         <input type="hidden" name="categorie" value="<?php echo $categorie;?>">
