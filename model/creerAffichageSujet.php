@@ -1,6 +1,12 @@
 <?php
 include("fonction/databaseFunction.php");
 include("fonction/diversFonction.php");
+
+/***
+ * Alfonso: fait des fonctions! On s'y perd sinon on ne peut pas voir clairement ce que fait le services
+ * Encore une fois la vue doit être dans un template c'est à dire dans une vue
+ */
+
 $connexion = connexion();
 $objet = $connexion->prepare('SELECT * FROM categorie');
 $objet->execute(array());

@@ -1,0 +1,16 @@
+
+
+
+/***
+* Alfonso: Je pense que le dossier fonction fait partie du model... mais comme tu as commencé comme ça on va le laisser
+* ou il est.
+*
+* Rappel toi les appels en base de donnés il faut les faire depuis le controleur ou tu vas définir tes variables
+* ensuite tu les réutilisera dans les templates c'est à dire les vues.
+
+* Pour le SQL je pense que tu as oublié le d'inserer un userId dans les post plutot que le pseudo d'un posteur
+* On identifie usuellement avec un id qui est l'incrémentateur plutot qu'un pseudo ou un email qui a peut-être vocation à changer
+
+* Il faut renommer les services par des choses plus explicites comme loginService.php, inscriptionService.php les deux premier ça passe mais
+* je vois un fichier service.php dans l'arborescence et je ne sais pas qu'est-ce qu'il est sensé faire.
+*/
