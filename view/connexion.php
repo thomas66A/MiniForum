@@ -24,5 +24,5 @@
 
         </form>
         <br>
-        <?php echo $_SESSION['pseudo'];?>
+        
 </div>

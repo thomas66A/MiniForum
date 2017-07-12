@@ -24,5 +24,9 @@
         <p><?php include('model/voirpost.php');echo $affiche;?></p>
     </div>       
 </div>
-
+<div id="repondre">
+    <form action="../model/repondre.php">
+        <text
+    </form>
+</div>
 
