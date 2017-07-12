@@ -9,7 +9,10 @@ if((isset($_GET['categorie'])) && (isset($_GET['numMessage'])))
         $numMessage=trim(intval($_GET['numMessage']));
         $tab=1;
     }
-    
+/***
+ * Alfonso: il faudrait faire une fonction de l'appel en base de données
+ * et l'html que tu génère devrait être une un template ( une vue).
+ */
 
 if($tab==1)
     {
