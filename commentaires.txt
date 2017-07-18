@@ -13,4 +13,29 @@
 
 * Il faut renommer les services par des choses plus explicites comme loginService.php, inscriptionService.php les deux premier ça passe mais
 * je vois un fichier service.php dans l'arborescence et je ne sais pas qu'est-ce qu'il est sensé faire.
+*
+*
+* Alfonso UPDATE: Je vois que tu as transversalement utiliser plein de technologie bravo pour ça
+* Il aurait fallu peut-être adopté la logique MVC dès le départ sur les 4 jours je pense que tu aurais gagné du temps
+* Étant donné que tu es un peu expérimenté tu aurais vite absorbé la logique. Par contre comme tu as pu voir changer de
+* stratégie en cours de route est très compliqué car ça pose des problèmes de redirection et plein de liens sont cassés.
+*
+* C'est une bonne expérience à avoir comme ça tu verras que ces structures tactiques sont en fait les premières choses qu'il faut
+* travailler et non la dernière. (En fait plein de personne ce sont faites avoir comme ça).
+*
+* Il est clair qu'il aurait fallu un peu plus de temps pour ce projet. Néanmoins on aurait pu maximiser en procédant de la sorte.
+*
+* Tout les appels en bases de données doivent être des fonctions et doivent être regroupés par logique
+* Par exemple tout les appels en base de données dans un même fichier
+* Dans un autre fichier tu peux mettre toutes les fonctions de nettoyage comme ça ça aurait du sens.
+* Faire les appels directement en base de données c'est vraiment du mauvais design. C'est ce qu'il faut éviter à tout pris
+* Qu'est ce qui passerai si on changeait le nom de la base de données? il faudrait modifier tout les services?
+* Aussi pour la sécurité c'est pas terrible que le mot de passe route soit un peut partout.
+*
+* Tu as du perdre beaucoup de temps pour refactoriser mais c'est un mal nécessaire.
+* Maintenant fait attention pour la prochaine fois.
+*
+* En tout cas bonne logique templating et css.
+*
+*
 */

@@ -1,5 +1,11 @@
 <?php
 session_start();
+
+/**
+ * Alfonso: normalement les vues ne vont pas ici elles vont dans le template principale
+ * et oui il faut faire l'include à chaque fois dans les templates.
+ * On veut que le contrôleur accède une et qu'une seule fois le templating.
+ */
 include('view/top.php');
 if(isset($_GET['page']))
     {
